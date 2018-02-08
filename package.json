@@ -1,0 +1,16 @@
+{
+  "name": "deep-shallow",
+  "version": "0.0.0",
+  "main": "dist/deep-shallow.js",
+  "types": "deep-shallow.d.ts",
+  "scripts": {
+    "build": "microbundle -o dist",
+    "dev": "microbundle watch -o dist"
+  },
+  "repository": "git@github.com:nju33/deep-shallow.git",
+  "author": "nju33 <nju33.ki@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.4.3"
+  }
+}
