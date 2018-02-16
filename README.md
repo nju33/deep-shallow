@@ -32,7 +32,7 @@ const deepObj = {
     y: 'y',
     z: 'z',
   },
-	arr: [1, 2, 3, 4],
+  arr: [1, 2, 3, 4],
 };
 
 const shallowObj = toShallow(deepObj);
@@ -44,7 +44,7 @@ const shallowObj = toShallow(deepObj);
 //   'bar.x': 'x',
 //   'bar.y': 'y',
 //   'bar.z': 'z'
-//  	arr: [1, 2, 3, 4],
+//    arr: [1, 2, 3, 4],
 // }
 
 toDeep(shallowObj);
@@ -60,6 +60,6 @@ toDeep(shallowObj);
 //     y: 'y',
 //     z: 'z',
 //   },
-//  	arr: [1, 2, 3, 4],
+//   arr: [1, 2, 3, 4],
 // };
 ```

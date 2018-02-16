@@ -2,9 +2,11 @@
   "name": "deep-shallow",
   "version": "0.0.1",
   "description": "An object convert between shallow and deep",
-  "main": "dist/deep-shallow.m.js",
-  "jsnext:main": "dist/deep-shallow.js",
-  "module": "dist/deep-shallow.js",
+  "main": "dist/deep-shallow.js",
+  "cjs:main": "dist/deep-shallow.js",
+  "module": "dist/deep-shallow.m.js",
+  "jsnext:main": "dist/deep-shallow.m.js",
+  "umd:main": "dist/deep-shallow.umd.js",
   "types": "deep-shallow.d.ts",
   "keywords": [
     "object"
@@ -15,7 +17,7 @@
     "deep-shallow.js.flow"
   ],
   "scripts": {
-    "build": "microbundle -i deep-shallow.ts -o dist && yarn dts | : && yarn jsflow | :",
+    "build": "microbundle -i deep-shallow.ts -o dist && (yarn dts > /dev/null 2>&1) && (yarn jsflow > /dev/null 2>&1)",
     "dts": "tsc -p tsconfig.d.json",
     "jsflow": "npx flowgen deep-shallow.d.ts -o deep-shallow.js.flow",
     "dev": "microbundle watch -o dist",
