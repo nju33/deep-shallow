@@ -4,5 +4,6 @@ module.exports = {
     '\\.ts$': 'ts-jest'
   },
   testMatch: ['<rootDir>/*.test.ts'],
-  collectCoverage: true
+  collectCoverage: true,
+  coverageDirectory: 'coverage'
 };
