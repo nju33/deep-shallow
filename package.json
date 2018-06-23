@@ -1,6 +1,6 @@
 {
   "name": "deep-shallow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An object convert between shallow and deep",
   "main": "dist/deep-shallow.js",
   "cjs:main": "dist/deep-shallow.js",
