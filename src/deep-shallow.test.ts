@@ -1,21 +1,21 @@
 import {toDeep, toShallow, ConvertObject} from './deep-shallow';
 
-describe('deep-shallow', () => {
+describe('deep-shallow', (): void => {
   const deepObject = {
     a: 'aaaa',
     b: 'bbbb',
     foo: {
       x: 123,
       y: 444,
-      z: 999
+      z: 999,
     },
     bar: {
       a: 'a',
       b: 'b',
       c: 'c',
-      d: 'd'
+      d: 'd',
     },
-    arr: ['qqq', 'www', 'eee']
+    arr: ['qqq', 'www', 'eee'],
   };
   type DeepObject = typeof deepObject;
 
@@ -29,16 +29,16 @@ describe('deep-shallow', () => {
     'bar.b': 'b',
     'bar.c': 'c',
     'bar.d': 'd',
-    arr: ['qqq', 'www', 'eee']
+    arr: ['qqq', 'www', 'eee'],
   };
   type ShallowObject = typeof shallowObject;
 
-  test('toDeep', () => {
+  test('toDeep', (): void => {
     const result = (toDeep as ConvertObject<DeepObject>)(shallowObject);
     expect(result).toMatchObject(deepObject);
   });
 
-  test('toShallow', () => {
+  test('toShallow', (): void => {
     const result = (toShallow as ConvertObject<ShallowObject>)(deepObject);
     expect(result).toMatchObject(shallowObject);
   });

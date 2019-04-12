@@ -1,9 +1,9 @@
 module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   transform: {
-    '\\.ts$': 'ts-jest'
+    '\\.ts$': 'ts-jest',
   },
-  testMatch: ['<rootDir>/*.test.ts'],
+  testMatch: ['<rootDir>/src/*.test.ts'],
   collectCoverage: true,
-  coverageDirectory: 'coverage'
+  coverageDirectory: 'coverage',
 };
